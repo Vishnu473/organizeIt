@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# 🗂️ OrganizeIt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *Stay organized your way with customizable templates.*
 
-Currently, two official plugins are available:
+**OrganizeIt** is a productivity web app that empowers users to create, manage, and share reusable templates to organize their tasks, notes, or ideas. Built with React + TypeScript and powered by Supabase for backend services.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* ✅ **User Authentication** (Signup, Login, Forgot Password)
+* ✅ **Template CRUD** (Create, Read, Update, Delete your custom templates)
+* ⏳ **Store Template-based Data** (upcoming)
+* ⏳ **Template Sharing** (upcoming)
+* 🌗 **Dark/Light Theme Toggle**
+* 🧑‍💻 Protected routes for authenticated users
+* 💡 Preview templates before using them
+* ☁️ Supabase integration for real-time database and auth
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🧱 Tech Stack
+
+* **Frontend:** React + TypeScript + Tailwind CSS
+* **Routing:** React Router
+* **Backend:** Supabase (Auth + Database)
+* **Deployment:** Vercel (planned)
+
+---
+
+## 🔧 Setup & Development
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/organizeit.git
+cd organizeit
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn
 ```
+
+### 3. Set up Supabase
+
+Create a `.env` file and add your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### 4. Run the app
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+---
+
+## 🔄 Upcoming Features
+
+* 💾 Use templates to store dynamic data entries
+* 🔗 Share templates with other users (public/private links)
+* 📤 Export templates and data
+* 🔍 Search and sort template collections
+
+---
+
+## 🙌 Contribution
+
+This is a solo project. If you'd like to suggest improvements or ideas, feel free to open an issue!
+
+---
+
+## 📜 License
+
+MIT License. Feel free to fork and build your own version!
+
+---
